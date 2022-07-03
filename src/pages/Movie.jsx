@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import MovieCard from "../components/MovieCard";
 
 const moviesURL = import.meta.env.VITE_API;
 const apiKey = import.meta.env.VITE_API_KEY;
@@ -19,7 +20,18 @@ const Movie = () => {
     getMovie(movieUrl);
   }, []);
 
-  return <div>{movie && <p>{movie.title}</p>}</div>;
+  return (
+    <div>
+      {movie && (
+        <>
+          <MovieCard movie={movie} />
+          <p>{movie.tagline}</p>
+          <h3>Descrição:</h3>
+          <p>{movie.overview}</p>
+        </>
+      )}
+    </div>
+  );
 };
 
 export default Movie;
