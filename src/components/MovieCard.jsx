@@ -4,7 +4,7 @@ import { FaStar } from "react-icons/fa";
 
 const imagesURL = import.meta.env.VITE_IMG;
 
-const MovieCard = ({ movie }) => {
+const MovieCard = ({ movie, showLink = true }) => {
   return (
     <div>
       <img src={imagesURL + movie.poster_path} alt={movie.title} />
@@ -12,7 +12,7 @@ const MovieCard = ({ movie }) => {
       <p>
         <FaStar /> {movie.vote_average}
       </p>
-      <Link to={`/movie/${movie.id}`}>Detalhes</Link>
+      {showLink && <Link to={`/movie/${movie.id}`}>Detalhes</Link>}
     </div>
   );
 };

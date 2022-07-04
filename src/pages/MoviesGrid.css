@@ -1,0 +1,15 @@
+.movies-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.movies-container div {
+  width: 30%;
+  color: #fff;
+}
+
+.movies-container div img {
+  max-width: 100%;
+}
