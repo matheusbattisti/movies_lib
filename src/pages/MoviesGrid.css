@@ -24,6 +24,7 @@
   margin-bottom: 2.5rem;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   background-color: #111;
   padding: 1rem;
 }
@@ -38,7 +39,7 @@
 }
 
 .movies-container div h2 {
-  height: 4.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .movies-container div svg {
